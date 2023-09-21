@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>登录页面</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(https://www.dmoe.cc/random.php);
+            position: relative;
+            height: 100%;
+            width: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .login-container {
+            max-width: 400px;
+            margin: 0 auto;
+            margin-top: 100px;
+            padding: 100px;
+            background-color: #ffffffc4;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+            backdrop-filter: saturate(4) blur(20px);
+            -webkit-backdrop-filter: saturate(4) blur(20px);
+        }
+
+        .login-container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 10px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            display: block;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="password"] {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            margin-left: -12px;
+        }
+
+        .form-group button {
+            width: 100%;
+            padding: 15px;
+            background-color: #18add3;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 25px;
+            margin-left: 7px;
+        }
+    </style>
+</head>
+<body>
+<div class="login-container">
+    <h1>登录</h1>
+        <div class="form-group">
+            <label for="username">用户名</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="password">密码</label>
+            <input type="password" id="password" name="password" required>
+            <span class="error" style="color: red"></span>
+        </div>
+        <div class="form-group">
+            <button type="submit" id="id_btn">登录</button>
+        </div>
+
+    <form action="/registation1" method="GET">
+        <div class="form-group">
+            <button type="submit">注册</button>
+        </div>
+    </form>
+</div>
+<script src="../static/js/jQuery.js"></script>
+
+<script>
+    $('#id_btn').click(function () {
+        event.preventDefault();  // 阻止表单的默认提交行为
+        $.ajax({
+            url: '/procress_login',
+            type: 'post',
+            data: {
+                username: $('#username').val(),
+                password: $('#password').val(),
+            },
+            success: function (data) {
+                if (data.code == 100) {
+                    location.href = '/welcome'
+                } else {
+                    console.log(data.msg)
+                    $('.error').text(data.msg)
+                }
+            }
+        })
+    })
+</script>
+</body>
+</html>

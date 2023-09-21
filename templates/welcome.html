@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block css %}
+    <link href="../static/css/welcome.css" rel="stylesheet">
+    <link href="../static/css/posts.css" rel="stylesheet">
+    <style>
+        .my_container {
+
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff8a;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+
+            </div>
+            <div class="col-md-7 my_container">
+                {% if results %}
+                    {% for article in results %}
+                        <div class="row">
+                            <div class="col-md-12">
+                                <section class="post-item-body panel panel-default">
+                                    <div class="panel-heading">
+                                        <a class="post-item-title" href="/posts?index={{ article.id }}"
+                                           target="_blank">{{ article.title }}</a>
+                                    </div>
+                                    <div class="panel-body">
+                                        <p class="post-item-summary">
+                                            <a href="#">
+                                                {% if article.avatar %}
+                                                <img src="../static/avatars/{{ article.user }}.jpg" class="avatar"
+                                                     alt="">
+                                                    {% else %}
+                                                    <img src="../static/avatars/Faukarus.jpg" class="avatar"
+                                                     alt="">
+                                                {% endif %}
+                                            </a>
+                                            {{ article.content }}
+                                        </p>
+                                    </div>
+                                    <footer class="panel-footer post-item-foot">
+                                        <a href="#" class="post-item-author"><span>{{ article.user }}</span></a>
+                                        <span class="post-meta-item">
+                <span>{{ article.created_at }}</span>
+              </span>
+                                    </footer>
+                                </section>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+            <div class="col-md-3">
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script src="../static/js/welcome.js"></script>
+{% endblock %}

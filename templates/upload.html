@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Image</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>图片上传</h1>
+    
+    <form action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*">
+        <input type="submit" value="上传">
+    </form>
+    <div></div>
+    <div></div>
+    <form action="/welcome" method="get">
+        <input type="submit" value="返回">
+    </form>
+</body>
+</html>

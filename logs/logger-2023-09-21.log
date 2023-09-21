@@ -1,0 +1,166 @@
+2023-09-21 18:01:58,442 - INFO - program.py - <module> - 28 - flask启动中
+2023-09-21 18:01:58,443 - INFO - program.py - <module> - 33 - session-key已经应用:sk-Hutaoprimarycontrolrods-master-wst
+2023-09-21 18:01:58,444 - WARNING - program.py - <module> - 35 - 注意,最大连接数已经设置为:1000,时刻监视这个数值!
+2023-09-21 18:01:58,444 - INFO - program.py - <module> - 37 - 应用数据库配置连接:127.0.0.1:3306:root:123456:Fukarus:utf8
+2023-09-21 18:02:07,975 - INFO - manage.py - <module> - 8 - 服务器启动将在倒计时20秒后.....
+2023-09-21 18:02:28,293 - INFO - manage.py - <module> - 11 - 服务器已启动
+2023-09-21 18:03:30,460 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - / - [访问请求来自:] - 127.0.0.1
+2023-09-21 18:03:30,460 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 18:03:31,124 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /static/js/jQuery.js - [访问请求来自:] - 127.0.0.1
+2023-09-21 18:03:31,125 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 18:03:34,115 - INFO - program.py - before_request - 65 - [方法为:] - POST - [路径来自] - /procress_login - [访问请求来自:] - 127.0.0.1
+2023-09-21 18:03:34,116 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 18:03:34,461 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /favicon.ico - [访问请求来自:] - 127.0.0.1
+2023-09-21 18:03:34,463 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 18:03:34,474 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /welcome - [访问请求来自:] - 127.0.0.1
+2023-09-21 18:03:34,475 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 18:03:34,735 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /static/css/bootstrap.min.css - [访问请求来自:] - 127.0.0.1
+2023-09-21 18:03:34,735 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 18:03:34,823 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /static/css/welcome.css - [访问请求来自:] - 127.0.0.1
+2023-09-21 18:03:34,823 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 18:03:34,833 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /static/css/posts.css - [访问请求来自:] - 127.0.0.1
+2023-09-21 18:03:34,834 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 18:03:34,844 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /static/js/bootstrap.min.js - [访问请求来自:] - 127.0.0.1
+2023-09-21 18:03:34,844 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 18:03:35,179 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /static/js/jQuery.js - [访问请求来自:] - 127.0.0.1
+2023-09-21 18:03:35,179 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 18:03:35,184 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /static/js/welcome.js - [访问请求来自:] - 127.0.0.1
+2023-09-21 18:03:35,186 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 18:03:35,317 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /welcome - [访问请求来自:] - 127.0.0.1
+2023-09-21 18:03:35,318 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 18:03:35,452 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /static/avatars/芙卡洛斯.jpg - [访问请求来自:] - 127.0.0.1
+2023-09-21 18:03:35,453 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 18:06:21,012 - INFO - program.py - <module> - 28 - flask启动中
+2023-09-21 18:06:21,013 - INFO - program.py - <module> - 33 - session-key已经应用:
+2023-09-21 18:06:21,014 - WARNING - program.py - <module> - 35 - 注意,最大连接数已经设置为:1000,时刻监视这个数值!
+2023-09-21 18:06:21,032 - INFO - program.py - <module> - 37 - 应用数据库配置连接:127.0.0.1:3306:root:123456:Fukarus:utf8
+2023-09-21 18:06:21,033 - WARNING - program.py - <module> - 41 - 警告,session_key未设置! 后边的session应用可能会无法使用!
+2023-09-21 18:06:30,477 - INFO - manage.py - <module> - 8 - 服务器启动将在倒计时20秒后.....
+2023-09-21 18:06:50,497 - INFO - manage.py - <module> - 11 - 服务器已启动
+2023-09-21 18:31:09,929 - INFO - program.py - <module> - 28 - flask启动中
+2023-09-21 18:31:09,959 - INFO - program.py - <module> - 33 - session-key已经应用:sk-Hutaoprimarycontrolrods-master-wst
+2023-09-21 18:31:09,960 - WARNING - program.py - <module> - 35 - 注意,最大连接数已经设置为:1000,时刻监视这个数值!
+2023-09-21 18:31:09,960 - INFO - program.py - <module> - 37 - 应用数据库配置连接:127.0.0.1:3306:root:123456:Fukarus:utf8
+2023-09-21 18:31:19,615 - INFO - manage.py - <module> - 8 - 服务器启动将在倒计时20秒后.....
+2023-09-21 18:31:39,930 - INFO - manage.py - <module> - 11 - 服务器已启动
+2023-09-21 18:31:46,588 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - / - [访问请求来自:] - 127.0.0.1
+2023-09-21 18:31:46,589 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 18:31:46,761 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /static/js/jQuery.js - [访问请求来自:] - 127.0.0.1
+2023-09-21 18:31:46,762 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 18:31:48,666 - INFO - program.py - before_request - 65 - [方法为:] - POST - [路径来自] - /procress_login - [访问请求来自:] - 127.0.0.1
+2023-09-21 18:31:48,666 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 18:31:48,679 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /welcome - [访问请求来自:] - 127.0.0.1
+2023-09-21 18:31:48,679 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 18:31:48,777 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /static/css/bootstrap.min.css - [访问请求来自:] - 127.0.0.1
+2023-09-21 18:31:48,777 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 18:31:48,782 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /static/css/welcome.css - [访问请求来自:] - 127.0.0.1
+2023-09-21 18:31:48,783 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 18:31:48,797 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /static/css/posts.css - [访问请求来自:] - 127.0.0.1
+2023-09-21 18:31:48,797 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 18:31:48,801 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /static/js/bootstrap.min.js - [访问请求来自:] - 127.0.0.1
+2023-09-21 18:31:48,802 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 18:31:48,865 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /static/js/welcome.js - [访问请求来自:] - 127.0.0.1
+2023-09-21 18:31:48,866 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 18:31:48,879 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /static/avatars/芙卡洛斯.jpg - [访问请求来自:] - 127.0.0.1
+2023-09-21 18:31:48,880 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 18:31:48,912 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /welcome - [访问请求来自:] - 127.0.0.1
+2023-09-21 18:31:48,913 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 18:31:48,947 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /static/js/jQuery.js - [访问请求来自:] - 127.0.0.1
+2023-09-21 18:31:48,948 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 18:31:48,950 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /static/css/static/Faukarus.jpg - [访问请求来自:] - 127.0.0.1
+2023-09-21 18:31:48,951 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 18:32:14,698 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /static/css/bootstrap.min.css - [访问请求来自:] - 127.0.0.1
+2023-09-21 18:32:14,699 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 18:32:14,703 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /static/css/welcome.css - [访问请求来自:] - 127.0.0.1
+2023-09-21 18:32:14,704 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 18:32:14,708 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /static/css/posts.css - [访问请求来自:] - 127.0.0.1
+2023-09-21 18:32:14,709 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 18:32:14,868 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /static/css/bootstrap.min.css.map - [访问请求来自:] - 127.0.0.1
+2023-09-21 18:32:14,869 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 18:32:19,391 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /welcome - [访问请求来自:] - 127.0.0.1
+2023-09-21 18:32:19,391 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 18:32:19,433 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /static/css/bootstrap.min.css - [访问请求来自:] - 127.0.0.1
+2023-09-21 18:32:19,436 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 18:32:19,439 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /static/css/welcome.css - [访问请求来自:] - 127.0.0.1
+2023-09-21 18:32:19,441 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 18:32:19,445 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /static/css/posts.css - [访问请求来自:] - 127.0.0.1
+2023-09-21 18:32:19,446 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 18:32:19,450 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /static/js/bootstrap.min.js - [访问请求来自:] - 127.0.0.1
+2023-09-21 18:32:19,451 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 18:32:19,456 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /static/js/jQuery.js - [访问请求来自:] - 127.0.0.1
+2023-09-21 18:32:19,457 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 18:32:19,461 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /welcome - [访问请求来自:] - 127.0.0.1
+2023-09-21 18:32:19,462 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 18:32:19,496 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /static/js/welcome.js - [访问请求来自:] - 127.0.0.1
+2023-09-21 18:32:19,497 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 18:32:19,499 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /static/avatars/芙卡洛斯.jpg - [访问请求来自:] - 127.0.0.1
+2023-09-21 18:32:19,500 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 18:32:19,527 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /static/css/bootstrap.min.css.map - [访问请求来自:] - 127.0.0.1
+2023-09-21 18:32:19,528 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 18:35:09,405 - INFO - program.py - <module> - 28 - flask启动中
+2023-09-21 18:35:09,405 - INFO - program.py - <module> - 33 - session-key已经应用:sk-Hutaoprimarycontrolrods-master-wst
+2023-09-21 18:35:09,406 - WARNING - program.py - <module> - 35 - 注意,最大连接数已经设置为:1000,时刻监视这个数值!
+2023-09-21 18:35:09,406 - INFO - program.py - <module> - 37 - 应用数据库配置连接:127.0.0.1:3306:root:123456:Fukarus:utf8
+2023-09-21 18:35:18,818 - INFO - manage.py - <module> - 8 - 服务器启动将在倒计时20秒后.....
+2023-09-21 18:35:38,836 - INFO - manage.py - <module> - 11 - 服务器已启动
+2023-09-21 18:35:59,643 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /welcome - [访问请求来自:] - 127.0.0.1
+2023-09-21 18:35:59,644 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 18:35:59,710 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /static/css/bootstrap.min.css - [访问请求来自:] - 127.0.0.1
+2023-09-21 18:35:59,710 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 18:35:59,779 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /static/css/welcome.css - [访问请求来自:] - 127.0.0.1
+2023-09-21 18:35:59,780 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 18:35:59,789 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /static/css/posts.css - [访问请求来自:] - 127.0.0.1
+2023-09-21 18:35:59,790 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 18:35:59,795 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /static/js/jQuery.js - [访问请求来自:] - 127.0.0.1
+2023-09-21 18:35:59,796 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 18:35:59,800 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /static/js/bootstrap.min.js - [访问请求来自:] - 127.0.0.1
+2023-09-21 18:35:59,800 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 18:35:59,805 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /static/js/welcome.js - [访问请求来自:] - 127.0.0.1
+2023-09-21 18:35:59,807 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 18:35:59,814 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /welcome - [访问请求来自:] - 127.0.0.1
+2023-09-21 18:35:59,818 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 18:35:59,843 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /static/avatars/芙卡洛斯.jpg - [访问请求来自:] - 127.0.0.1
+2023-09-21 18:35:59,844 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 18:36:14,457 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /static/css/bootstrap.min.css - [访问请求来自:] - 127.0.0.1
+2023-09-21 18:36:14,457 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 18:36:14,461 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /static/css/welcome.css - [访问请求来自:] - 127.0.0.1
+2023-09-21 18:36:14,462 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 18:36:14,465 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /static/css/posts.css - [访问请求来自:] - 127.0.0.1
+2023-09-21 18:36:14,466 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 18:36:14,520 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /static/css/bootstrap.min.css.map - [访问请求来自:] - 127.0.0.1
+2023-09-21 18:36:14,521 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 19:05:07,454 - INFO - program.py - <module> - 28 - flask启动中
+2023-09-21 19:05:07,483 - INFO - program.py - <module> - 33 - session-key已经应用:sk-Hutaoprimarycontrolrods-master-wst
+2023-09-21 19:05:07,484 - WARNING - program.py - <module> - 35 - 注意,最大连接数已经设置为:1000,时刻监视这个数值!
+2023-09-21 19:05:07,485 - INFO - program.py - <module> - 37 - 应用数据库配置连接:127.0.0.1:3306:root:123456:Fukarus:utf8
+2023-09-21 19:05:17,086 - INFO - manage.py - <module> - 8 - 服务器启动将在倒计时20秒后.....
+2023-09-21 19:05:37,179 - INFO - manage.py - <module> - 11 - 服务器已启动
+2023-09-21 19:07:03,319 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - / - [访问请求来自:] - 127.0.0.1
+2023-09-21 19:07:03,319 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 19:07:03,364 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /static/js/jQuery.js - [访问请求来自:] - 127.0.0.1
+2023-09-21 19:07:03,365 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 19:07:04,816 - INFO - program.py - before_request - 65 - [方法为:] - POST - [路径来自] - /procress_login - [访问请求来自:] - 127.0.0.1
+2023-09-21 19:07:04,816 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 19:07:04,845 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /welcome - [访问请求来自:] - 127.0.0.1
+2023-09-21 19:07:04,845 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 19:07:05,010 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /static/css/bootstrap.min.css - [访问请求来自:] - 127.0.0.1
+2023-09-21 19:07:05,010 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 19:07:05,023 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /static/css/welcome.css - [访问请求来自:] - 127.0.0.1
+2023-09-21 19:07:05,024 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 19:07:05,036 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /static/css/posts.css - [访问请求来自:] - 127.0.0.1
+2023-09-21 19:07:05,037 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 19:07:05,041 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /static/js/bootstrap.min.js - [访问请求来自:] - 127.0.0.1
+2023-09-21 19:07:05,042 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 19:07:05,055 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /static/js/welcome.js - [访问请求来自:] - 127.0.0.1
+2023-09-21 19:07:05,056 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 19:07:05,068 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /static/js/jQuery.js - [访问请求来自:] - 127.0.0.1
+2023-09-21 19:07:05,070 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 19:07:05,074 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /welcome - [访问请求来自:] - 127.0.0.1
+2023-09-21 19:07:05,075 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 19:07:05,131 - INFO - program.py - before_request - 65 - [方法为:] - GET - [路径来自] - /static/avatars/芙卡洛斯.jpg - [访问请求来自:] - 127.0.0.1
+2023-09-21 19:07:05,131 - INFO - program.py - before_request - 73 - 连接数为:1
+2023-09-21 19:56:21,674 - INFO - program.py - <module> - 28 - flask启动中
+2023-09-21 19:56:21,690 - INFO - program.py - <module> - 33 - session-key已经应用:sk-Hutaoprimarycontrolrods-master-wst
+2023-09-21 19:56:21,691 - WARNING - program.py - <module> - 35 - 注意,最大连接数已经设置为:1000,时刻监视连接数值!
+2023-09-21 19:56:21,692 - INFO - program.py - <module> - 37 - 应用数据库配置连接:127.0.0.1:3306:root:123456:Fukarus:utf8
+2023-09-21 19:56:31,194 - INFO - manage.py - <module> - 8 - 服务器启动将在倒计时20秒后.....

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>远帆</title>
+    <style>
+        li {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>音乐播放</h1>
+    <ul>
+        {% for music in music_list %}
+        <li onclick="playMusic('{{ music[2] }}')">{{ music[1] }}</li>
+        {% endfor %}
+    </ul>
+
+    <audio id="musicPlayer" controls></audio>
+
+    <script>
+        function playMusic(filepath) {
+            var musicPlayer = document.getElementById('musicPlayer');
+            musicPlayer.src = filepath;
+            musicPlayer.play();
+        }
+    </script>
+</body>
+</html>

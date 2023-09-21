@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>头像选择器</title>
+</head>
+<body>
+    <h1>头像选择器</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="avatar" accept="image/*">
+        <input type="submit" value="上传头像">
+    </form>
+
+    <h2>当前头像：</h2>
+    <img src="/avatar" alt="头像">
+</body>
+</html>

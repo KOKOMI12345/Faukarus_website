@@ -1,0 +1,153 @@
+{% extends 'base.html' %}
+
+{% block css %}
+    <link href="../static/css/welcome.css" rel="stylesheet">
+    <style>
+        .my_container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff8a;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+        }
+
+        .post {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #ffffffc4;
+            border-radius: 5px;
+            backdrop-filter: saturate(2) blur(5px);
+            -webkit-backdrop-filter: saturate(2) blur(5px);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+{% endblock %}
+
+
+{% block content %}
+    <div class="my_container">
+        <div class="container-fluid">
+            <div style="display: flex; align-items: center;">
+                {% if posts.avatar %}
+                    <img src="../static/avatars/{{ posts.username }}.jpg" alt=""
+                         style="width: 40px;height: 40px; margin-right: 10px">
+                {% else %}
+                    <img src="../static/avatars/Faukarus.jpg" alt=""
+                         style="width: 40px;height: 40px; margin-right: 10px">
+                {% endif %}
+                <div style="display: flex; flex-direction: column;">
+                    <div>{{ posts.username }}</div>
+                    <div style="font-weight: bold;">{{ posts.title }}</div>
+                </div>
+            </div>
+            {% if delete %}
+                <button id="btn-delete" style="background-color: #fb7299;color: white">删除</button>
+            {% endif %}
+            <h5>创建时间：{{ posts.created_at }}</h5>
+            <p class="post-content">{{ posts.content }}</p>
+        </div>
+
+        <hr>
+
+        <div class="container-fluid comment_lists">
+            <h3 style="color: #fb7299">回复区</h3>
+            {% for comment in comments %}
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <p>{{ comment.content }}</p>
+                        <p class="text-muted">评论者：{{ comment.user }} &nbsp; 发布时间：{{ comment.created_at }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+        <hr>
+
+        <button class="btn btn-primary" id="btn-comment">评论</button>
+    </div>
+
+
+    <!-- 评论模态框 -->
+    <div class="modal fade" id="commentModal" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: #fb7299">
+                    <h4 class="modal-title" id="commentModalLabel">评论</h4>
+                </div>
+                <div class="modal-body">
+                    <!-- 模态框内容 -->
+                    <form id="commentForm">
+                        <div class="form-group">
+                            <label for="comment">评论内容:</label>
+                            <textarea class="form-control" id="comment" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="btn-comment2">提交评论</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block js %}
+    <script>
+        var post_id;
+        $('#btn-delete').click(function () {
+            $.ajax({
+                url: '/delete_post',
+                type: 'post',
+                data: {
+                    post_id: '{{ posts.id }}'
+                },
+                success: function (data) {
+                    alert('删除成功')
+                    location.href = '/welcome'
+                }
+            })
+        })
+
+
+        $("#btn-comment").click(function () {
+            // 显示评论模态框
+            $("#commentModal").modal("show");
+        });
+
+        $('#commentModal').on('show.bs.modal', function (e) {
+            // 清空textarea的值
+            $('#comment').val('');
+        });
+
+        $('#btn-comment2').click(function (e) {
+            e.preventDefault(); // 阻止表单默认提交
+
+            $.ajax({
+                url: '/posts',
+                type: 'post',
+                data: {
+                    comment: $('#comment').val(),
+                    post_id: '{{ posts.id }}'
+                },
+                success: function (data) {
+                    $('.comment_lists').empty()
+
+                    data['comments'].forEach(function (comment) {
+                        var commentHtml = '<div class="panel panel-default">' +
+                            '<div class="panel-body">' +
+                            '<p>' + comment.content + '</p>' +
+                            '<p class="text-muted">评论者：' + comment.user + ' &nbsp; 发布时间：' + comment.created_at + '</p>' +
+                            '</div>' +
+                            '</div>';
+
+                        $('.comment_lists').append(commentHtml);
+                    });
+
+
+                    $('#commentModal').modal('hide')
+                }
+            })
+        })
+    </script>
+    <script src="../static/js/welcome.js"></script>
+{% endblock %}

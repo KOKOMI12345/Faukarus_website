@@ -1,0 +1,22 @@
+.post-item-body {
+    margin-top: 11px;
+}
+
+.post-item-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.avatar {
+    border-radius: 0;
+    width: 40px;
+    height: 40px;
+    padding: 1px;
+    border: 1px solid #ccc;
+    float: left;
+    margin-right: 5px;
+    margin-top: 3px;
+}

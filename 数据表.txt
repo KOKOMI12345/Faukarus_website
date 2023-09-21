@@ -1,0 +1,70 @@
+新建用户表
+CREATE TABLE userinfo (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  user VARCHAR(255) NOT NULL,
+  pwd VARCHAR(255) NOT NULL,
+  age INT
+);
+
+
+新建消息表
+CREATE TABLE messagetable (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  user_id INT NOT NULL,
+  message VARCHAR(255) NOT NULL,
+  timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  sender VARCHAR(255) NOT NULL,
+  FOREIGN KEY (user_id) REFERENCES userinfo(id)
+);
+
+
+新建好友表
+CREATE TABLE friend (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  user_id INT NOT NULL,
+  friend_id INT NOT NULL,
+  CONSTRAINT fk_userinfo FOREIGN KEY (user_id) REFERENCES userinfo(id)
+);
+
+
+新建图片表
+CREATE TABLE images (
+    id INT NOT NULL AUTO_INCREMENT,
+    filename VARCHAR(255) NOT NULL,
+    PRIMARY KEY (id)
+);
+
+
+新建帖子表
+CREATE TABLE posts (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(255) NOT NULL,
+  content TEXT NOT NULL,
+  user_id INT NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (user_id) REFERENCES userinfo(id) ON DELETE CASCADE
+);
+
+
+新建评论表
+CREATE TABLE comments (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  content TEXT NOT NULL,
+  user_id INT NOT NULL,
+  post_id INT NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (user_id) REFERENCES userinfo(id) ON DELETE CASCADE,
+  FOREIGN KEY (post_id) REFERENCES posts(id) ON DELETE CASCADE
+);
+
+
+'''帖子信息中转站
+CREATE TABLE chat(  
+    id int NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
+    send_time DATETIME COMMENT 'date Time',
+    user VARCHAR(255) COMMENT 'user',
+    message VARCHAR(255) COMMENT 'message'
+) COMMENT '帖子信息中转站';
+
+'''音乐'''
+CREATE TABLE IF NOT EXISTS music (id INT AUTO_INCREMENT PRIMARY KEY, filename VARCHAR(255), filepath VARCHAR(255))

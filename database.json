@@ -1,0 +1,9 @@
+{
+    "host": "your-host",
+    "port": 3306,
+    "user": "your-name",
+    "password": "your-password",
+    "database": "your-database",
+    "charset":"utf8",
+    "session-key":"your-session-key"
+}

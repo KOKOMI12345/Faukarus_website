@@ -1,0 +1,8 @@
+2023-09-20 17:49:06,729 - INFO - program.py - <module> - 28 - flask启动中
+2023-09-20 17:49:16,141 - INFO - manage.py - <module> - 8 - 服务器启动将在倒计时20秒后.....
+2023-09-20 17:49:36,161 - INFO - manage.py - <module> - 11 - 服务器已启动
+2023-09-20 17:50:31,710 - INFO - program.py - <module> - 28 - flask启动中
+2023-09-20 17:50:31,711 - INFO - program.py - <module> - 33 - session-key已经应用:sk-Hutaoprimarycontrolrods-master-wst
+2023-09-20 17:50:31,711 - INFO - program.py - <module> - 36 - 应用数据库配置连接:127.0.0.1:3306:root:123456:Fukarus:utf8
+2023-09-20 17:50:41,102 - INFO - manage.py - <module> - 8 - 服务器启动将在倒计时20秒后.....
+2023-09-20 17:51:01,120 - INFO - manage.py - <module> - 11 - 服务器已启动

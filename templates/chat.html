@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>论坛</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+			background-image: url(https://www.dmoe.cc/random.php);
+			position: relative;
+            height: 100%;
+            width: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+			
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+			background-color: #ffffff8a;
+			box-shadow: 0 0 10px rgba(0,0,0,0.8);
+			border-radius: 10px;
+        }
+        .post {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #ffffffc4;
+            border-radius: 5px;
+			backdrop-filter: saturate(2) blur(5px);
+            -webkit-backdrop-filter: saturate(2) blur(5px);
+			box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+        .title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .author {
+            font-size: 14px;
+            color: #888;
+            margin-bottom: 5px;
+        }
+        .content {
+            font-size: 16px;
+        }
+        .form-container {
+            margin-bottom: 20px;
+            padding: 40px;
+            background-color: #ffffffc4;
+            border-radius: 5px;
+			backdrop-filter: saturate(2) blur(5px);
+            -webkit-backdrop-filter: saturate(2) blur(5px);
+			box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+        .form-container textarea {
+            width: 100%;
+            height: 100px;
+            padding: 5px;
+            font-size: 16px;
+			border-radius: 8px;
+        }
+        .form-container button {
+            padding: 10px 20px;
+            font-size: 16px;
+			border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="back">
+        <form action="/back" method="post" style="border-radius: 10px" >
+            <button type="submit" style="background-color: #fb7299;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 10px;" >返回主页</button>
+        </form>
+    </div>
+    <div class="container">
+        <h1>论坛</h1>
+        
+        <div class="form-container">
+            <h2>发布新帖子</h2>
+            <form action="/chat2" method="POST">
+                <textarea name="message" placeholder="请输入帖子内容"></textarea><br>
+                <button type="submit">发布</button>
+            </form>
+        </div>
+        <!--上面是发布区域,对接数据库用的,下面是浏览区域!-->
+        <h2>最新帖子</h2>
+        {% for chat in chat_data %}
+            <div class="post">
+                <div class="title">{{ chat.title }}</div>
+                <div class="user">{{ chat.user }}</div>
+                <div class="message">
+                    {{ chat.message }}
+                </div>
+                <div class="send_time">发布时间：{{ chat.send_time }}</div>
+            </div>
+        {% endfor %}
+
+    </div>
+
+
+

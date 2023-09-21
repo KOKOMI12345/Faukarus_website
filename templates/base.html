@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+
+        .list-group {
+            list-style-type: none;
+        }
+
+        .list-group:after {
+            display: none;
+        }
+
+    </style>
+    {% block css %}
+    {% endblock %}
+</head>
+<body>
+{#导航栏#}
+<div>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/welcome" style="color: white">主页</a>
+                <a class="navbar-brand btn" style="color: white;" id="btn-new-post">发布帖子</a>
+                <a class="navbar-brand" href="/get_img" style="color: white;">照片墙</a>
+
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    {#                    <li><a href="#" style="color: white">###</a></li>#}
+
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <label for="id_file">
+
+                            {% if avatar %}
+                                <img id="id_img" src="../static/avatars/{{ username }}.jpg" alt="头像"
+                                     style="width: 40px; height: 40px; border-radius: 50%; display: inline-block; vertical-align: middle;">
+                            {% else %}
+                                <img id="id_img" src="../static/avatars/Faukarus.jpg" alt="头像"
+                                     style="width: 40px; height: 40px; border-radius: 50%; display: inline-block; vertical-align: middle;">
+                            {% endif %}
+                        </label>
+                        <input type="file" name="file" id="id_file" style="display: none">
+
+                        <a href="#"
+                           style="color: white; display: inline-block; vertical-align: middle;">{{ username }}</a>
+                    </li>
+                    <li><a href="#" data-toggle="modal" data-target="#myModal" style="color: white"
+                           id="Mymessage">我的消息</a></li>
+                    <li class="dropdown">
+                        <a id="drop_menu" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-haspopup="true"
+                           aria-expanded="false" style="color: white">更多操作 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" class="btn-toggle-sidebar" id="myfriend_list">好友列表</a></li>
+                            <li><a href="#" data-toggle="modal" data-target="#addFriendModal">添加好友</a>
+                            </li>
+                            <li><a href="#" data-toggle="modal" data-target="#imageModal">上传照片</a></li>
+
+                            <li><a href="#">修改密码（暂无）</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="/logout">注销</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+
+{#侧边栏#}
+<div>
+    <div class="panel panel-default sidebar" style="background-color: #fb7299">
+        <ul class="list-group" id="friendList">
+        </ul>
+    </div>
+</div>
+
+{% block content %}
+
+{% endblock %}
+
+<!-- 发布帖子模态框 -->
+<div class="modal fade" id="newPostModal" tabindex="-1" role="dialog" aria-labelledby="newPostModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <!-- 模态框内容 -->
+            <div class="modal-header" style="background-color: #fb7299">
+                <h4 class="modal-title" id="newPostModalLabel">发布帖子</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="postTitle">帖子标题</label>
+                        <input type="text" class="form-control" id="postTitle">
+                    </div>
+                    <div class="form-group">
+                        <label for="postContent">帖子内容</label>
+                        <textarea class="form-control" id="postContent" rows="3"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="btn_send_post">发布</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{#发送消息模态框#}
+<div id="messageModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- 模态框内容 -->
+            <div class="modal-header" style="background-color: #fb7299;color:white">
+                <h4 class="modal-title">发送消息</h4>
+            </div>
+            <div class="modal-body">
+                <!-- 模态框表单内容 -->
+                <form>
+                    <div class="form-group">
+                        <label for="message">消息内容:</label>
+                        <textarea class="form-control" id="message" rows="3"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button id="send_btn" type="button" class="btn btn-primary"
+                        style="background-color: #fb7299;color:white">发送
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{#查看消息模态框#}
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- 模态框内容 -->
+        <div class="modal-content">
+            <div class="modal-header" style="background-color: #fb7299;color:white">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">我的消息</h4>
+            </div>
+            <div class="modal-body" id="modal-body-message">
+                <!-- 这里插入消息内容 -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{#添加好友模态框#}
+<div class="modal fade" id="addFriendModal" tabindex="-1" role="dialog" aria-labelledby="addFriendModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header" style="background-color:#fb7299">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="addFriendModalLabel">添加好友</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="friendIdInput">好友 ID：</label>
+                        <input type="text" class="form-control" id="friendIdInput">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary" id="addfriend">添加</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{#上传照片模态框#}
+<div id="imageModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header" style="background-color: #fb7299;color:white">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">上传照片</h4>
+            </div>
+            <div class="modal-body">
+                <label for="image_file">
+
+                    <img id="image_picture" src="#" alt="点击上传你的照片"
+                         style="width: 200px; height: 65px;  vertical-align: middle;">
+
+                </label>
+                <input type="file" name="file" id="image_file" style="display: none">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary" id="image_upload">上传</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../static/js/jQuery.js"></script>
+<script src="../static/js/bootstrap.min.js"></script>
+{% block js %}
+{% endblock %}
+</body>
+</html>
